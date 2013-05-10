@@ -1,0 +1,42 @@
+<div class='row'>
+	<div class="span12">
+		<h2>Radarsat 2 Example Behavior Tree</h2>
+		Status: {{ctx.activity}} 
+		<br/>
+		<br/>
+		<div ng-show='showResults'>
+			<b>Results:</b> 
+			<pre class='prettyprint'>
+{{ctx.result}}
+			</pre>
+		</div>
+		<button ng-click="go(actor);" class='btn btn-primary' ng-show="showGenerate">Follow Behavior</button>	
+	</div>
+
+	<div class='span12'>
+		<h2>Behavior Tree</h2>
+ 		<div id="fluo"></div>
+								
+		<h2>Javascript Representation Tree</h2>
+		<pre>
+			<div id='definition_input'></div>
+			<br/>
+		</pre>
+	</div>
+</div>
+
+<script src='examples/radarsat2.js'></script>
+
+<script>
+	var actor	= Radarsat2;
+	var tree 	= actor.tree;
+	var states	= actor.states;
+	var title 	= actor.meta.title;
+	var html 	= RuoteFluoEditor.syntaxHighlight( tree );
+	$('#definition_input').html(html)
+
+	var btree = toFluo( { "behavior": title, "tree": tree } );	
+	//$('#btree').html(JSON.stringify(btree));
+	
+	Fluo.render('fluo', btree, { noOuterBorder: true });
+</script>

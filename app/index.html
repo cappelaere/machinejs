@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" ng-app="btApp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Behavior Trees With AngularJS</title>
+	
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/css/bootstrap-combined.min.css" />
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
+	
+	<link href="css/bench.css" rel="stylesheet" type="text/css" />
+	<link href="css/ruote-fluo.css" rel="stylesheet" type="text/css" />
+	<link href="css/ruote-fluo-editor.css" rel="stylesheet" type="text/css" />
+	
+	<style type="text/css">
+	      body {
+	        padding-top: 60px;
+	        padding-bottom: 40px;
+	      }
+	      .sidebar-nav {
+	        padding: 9px 0;
+	      }
+
+	      @media (max-width: 980px) {
+	        /* Enable use of floated navbar text */
+	        .navbar-text.pull-right {
+	          float: none;
+	          padding-left: 5px;
+	          padding-right: 5px;
+	        }
+	      }
+	</style>
+</head>
+<body>
+	
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="brand" href="#">
+					<img src='./img/logo.png' width='32'/>
+					Behavior Trees On Client Side With Angular
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span3">
+				<div class="well sidebar-nav">
+					
+					<ul class="nav nav-list">
+						<li class="nav-header"><a href="#/home">Home</a></li>
+						<li class="nav-header">Example Trees</li>
+						<li> <a href="#/tree1"><i class='icon-picture'></i>Modis</a></li>
+						<li> <a href="#/tree2"><i class='icon-pencil'></i>Radarsat</a></li>
+						<li> <a href="#/tree3"><i class='icon-pencil'></i>EO-1</a></li>
+						<li> <a href="#/tree4"><i class='icon-pencil'></i>TestPar</a></li>
+						<!-- 
+						<li> <a href="#/test"><i class='icon-pencil'></i>test</a></li>
+						-->
+					</ul>
+				</div><!--/.well -->
+			</div><!--/span-->
+			
+			<div class="span9"
+				<div ng-view></div>
+			</div>
+		</div>
+		
+		<footer>
+			<div class="span3">
+			<div>version: v<span app-version></span></div>
+			</div>
+		</footer>
+	</div>
+
+
+	<!-- Twitter Bootstrap stuff -->
+	<script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/js/bootstrap.min.js"></script>
+
+	<!-- JQuery -->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+	<!-- Javascript prettifier -->
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+	<!-- In production use:
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+	-->
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular/angular-resource.js"></script>
+
+<!-- Angular App stuff -->
+  <script src="js/angular/app.js"></script>
+  <script src="js/angular/services.js"></script>
+  <script src="js/angular/controllers.js"></script>
+  <script src="js/angular/filters.js"></script>
+  <script src="js/angular/directives.js"></script>
+
+<!-- Tree Editor stuff -->
+  <script src="js/ruote-fluo/nu.js"></script>
+  <script src="js/ruote-fluo/john.js"></script>
+  <script src="js/ruote-fluo/ruote-fluo.js"></script>
+  <script src="js/ruote-fluo/ruote-fluo-editor.js"></script>
+  <script src="js/ruote-fluo/to-fluo.js"></script>
+
+<!-- Machine stuff -->
+<script src="js/bt/base.js"></script>
+<script src="js/bt/machine.js"></script>
+
+</body>
+</html>

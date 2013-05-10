@@ -1,3 +1,7 @@
+[2013-05-10: v2.0]  PGC
+	Updated code base to work with Angular.js on the client side and support promises for delayed activities that may take place back on the server.
+	Added concurrence
+
 [2011-08-22: v1.1]
 
 [ADDED] warp() function that allows behaviour tree to be brute-forced into a specified state.
