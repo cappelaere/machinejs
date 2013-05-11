@@ -46,7 +46,7 @@ var controllers = angular.module('btApp.controllers', [])
 		
 	} // end of go fucntoon
 	
-	//scope.ctx.actor 	= actor;
+	scope.ctx.actor 	= actor;	
 	scope.ctx.activity 	= "ready";
 	scope.showGenerate 	= true;
 });

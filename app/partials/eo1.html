@@ -39,5 +39,7 @@
 	var btree = toFluo( { "behavior": title, "tree": tree } );	
 	//$('#btree').html(JSON.stringify(btree))
 	
+	scope.ctx.actor 	= actor;
+	
 	Fluo.render('fluo', btree, { noOuterBorder: true });
 </script>

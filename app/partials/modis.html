@@ -37,7 +37,7 @@
 	var title 	= actor.meta.title;
 	var html 	= RuoteFluoEditor.syntaxHighlight( tree );
 	$('#definition_input').html(html)
-
+	
 	var btree = toFluo( { "behavior": title, "tree": tree } );	
 	Fluo.render('fluo', btree, { noOuterBorder: true });
 </script>
